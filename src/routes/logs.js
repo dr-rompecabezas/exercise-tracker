@@ -97,8 +97,6 @@ router.get('/api/users/:_id/logs', (req, res) => {
       response.count = response.log.length
     }
 
-    let result = response.log.map(e => ({ ...e, date: e.date.toDateString() }))
-
     res.status(200).send(response)
   })
     .catch(err => {
